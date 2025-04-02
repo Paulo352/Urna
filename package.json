@@ -1,0 +1,40 @@
+{
+    "name": "urna-eletronica-web",
+    "version": "1.0.0",
+    "description": "Sistema de votação eletrônica em JavaScript para web",
+    "main": "public/index.html",
+    "scripts": {
+      "start": "serve -s public",
+      "dev": "serve -s public",
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "build": "echo \"Building static files\"",
+      "format": "prettier --write \"**/*.{js,jsx,json,html,css}\""
+    },
+    "keywords": [
+      "urna",
+      "eleições",
+      "votação",
+      "javascript",
+      "web"
+    ],
+    "author": "Seu Nome <seu.email@example.com>",
+    "license": "GPL-3.0-or-later",
+    "dependencies": {
+      "serve": "^14.2.0"
+    },
+    "devDependencies": {
+      "prettier": "^3.0.0"
+    },
+    "browserslist": {
+      "production": [
+        ">0.2%",
+        "not dead",
+        "not op_mini all"
+      ],
+      "development": [
+        "last 1 chrome version",
+        "last 1 firefox version",
+        "last 1 safari version"
+      ]
+    }
+  }
