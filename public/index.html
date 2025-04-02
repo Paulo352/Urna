@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urna Eletrônica</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Tela de Autenticação -->
+        <div id="auth-screen" class="screen">
+            <h1>Autenticação de Mesário</h1>
+            <form id="auth-form">
+                <input type="text" id="username" placeholder="Usuário" required>
+                <input type="password" id="password" placeholder="Senha" required>
+                <button type="submit">Entrar</button>
+            </form>
+        </div>
+
+        <!-- Tela de Votação -->
+        <div id="voting-screen" class="screen hidden">
+            <div class="header">
+                <h2>URNA ELETRÔNICA</h2>
+                <div id="candidate-display"></div>
+            </div>
+            
+            <div class="keypad">
+                <div class="display">
+                    <input type="text" id="vote-input" maxlength="2" readonly>
+                </div>
+                <div class="keys">
+                    <button data-number="1">1</button>
+                    <button data-number="2">2</button>
+                    <button data-number="3">3</button>
+                    <button data-number="4">4</button>
+                    <button data-number="5">5</button>
+                    <button data-number="6">6</button>
+                    <button data-number="7">7</button>
+                    <button data-number="8">8</button>
+                    <button data-number="9">9</button>
+                    <button data-number="0">0</button>
+                    <button id="corrige">CORRIGE</button>
+                    <button id="confirma">CONFIRMA</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tela de Administração -->
+        <div id="admin-screen" class="screen hidden">
+            <h1>Painel de Administração</h1>
+            <div class="admin-actions">
+                <button id="show-results">Ver Resultados</button>
+                <button id="export-data">Exportar Dados</button>
+                <button id="reset-votes">Zerar Urna</button>
+            </div>
+            <div id="results-display"></div>
+        </div>
+    </div>
+
+    <script src="/js/crypto.js"></script>
+    <script src="/js/auth.js"></script>
+    <script src="/js/ballot.js"></script>
+    <script src="/js/admin.js"></script>
+    <script src="/js/app.js"></script>
+</body>
+</html>
